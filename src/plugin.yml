@@ -1,0 +1,7 @@
+name: Murder
+main: tk.t11e.murder.main.Main
+version: '1.0'
+api-version: '1.15'
+author: booky10
+description: The murder game plugin for T11E
+prefix: Murder

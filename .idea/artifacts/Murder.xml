@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Murder">
+    <output-path>$USER_HOME$/GameServer/plugins</output-path>
+    <root id="archive" name="Murder.jar">
+      <element id="module-output" name="Murder" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />
+    </root>
+  </artifact>
+</component>
