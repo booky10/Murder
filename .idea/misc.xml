@@ -4,6 +4,28 @@
     <list size="1">
       <item index="0" class="java.lang.String" itemvalue="org.bukkit.event.EventHandler" />
     </list>
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="getAmount" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="getEnchantments" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="getItemFlags" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="getMaterial" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="getName" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="isUnbreakable" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="removeEnchantment" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="removeItemFlags" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="setAmount" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="setEnchantments" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="setItemFlags" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="setMaterial" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="setName" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="addEnchantment" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="addItemFlags" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="build" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="ItemBuilder" />
+    <pattern value="tk.t11e.murder.util.ItemBuilder" method="setUnbreakable" />
+    <pattern value="tk.t11e.murder.util.PlayerUtil" method="getMaxHealth" />
+    <pattern value="tk.t11e.murder.util.PlayerUtil" />
+    <pattern value="tk.t11e.murder.util.PlayerUtil" method="setMaxHealth" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
