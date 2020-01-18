@@ -35,7 +35,7 @@ public class DamageListener implements Listener {
             event.setCancelled(true);
         else {
             if (event.getDamager().getType().equals(EntityType.ARROW)) {
-                event.setCancelled(true);
+                event.setDamage(0);
                 MurderManager.kill(player);
                 event.getDamager().remove();
                 return;
@@ -44,7 +44,7 @@ public class DamageListener implements Listener {
             Player enemy = (Player) event.getDamager();
 
             if (enemy.getInventory().getItemInMainHand().getType().equals(Material.IRON_SWORD)) {
-                event.setCancelled(true);
+                event.setDamage(0);
                 MurderManager.kill(player);
             }
         }

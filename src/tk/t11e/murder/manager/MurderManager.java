@@ -10,6 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitTask;
 import tk.t11e.murder.main.Main;
 import tk.t11e.murder.util.Murder;
+import tk.t11e.murder.util.Randomizer;
 import tk.t11e.murder.util.WorldUtils;
 import tk.t11e.murder.util.ItemBuilder;
 
@@ -19,7 +20,7 @@ import java.util.*;
 public class MurderManager {
 
     private static final Main main = Main.getPlugin(Main.class);
-    public static final int NEEDED_PLAYERS = 2, TIME = 15;
+    public static final int NEEDED_PLAYERS = 2, TIME = 5;
     public static boolean isRunning = false;
     public static int starting = 0;
     private static BukkitTask task;
@@ -107,13 +108,13 @@ public class MurderManager {
     public static void randomizeRoles() {
         ArrayList<Player> players = WorldUtils.getPlayersInWorld(getWorld());
 
-        int detective = new Random().nextInt(players.size());
+        int detective = Randomizer.random(0,players.size()-1);
         roleHashMap.put(players.get(detective).getUniqueId(), Murder.DETECTIVE);
         players.get(detective).sendMessage(Main.PREFIX + "§aYou are §9Detective§a!");
         players.get(detective).sendTitle("§aYou are", "§9Detective", 10, 60, 10);
         players.remove(detective);
 
-        int murder = new Random().nextInt(players.size());
+        int murder = Randomizer.random(0,players.size()-1);
         roleHashMap.put(players.get(murder).getUniqueId(), Murder.MURDER);
         players.get(murder).sendMessage(Main.PREFIX + "§aYou are §4Murder§a!");
         players.get(murder).sendTitle("§aYou are", "§4Murder", 10, 60, 10);
@@ -121,8 +122,8 @@ public class MurderManager {
 
         for (Player player : players) {
             roleHashMap.put(player.getUniqueId(), Murder.INNOCENT);
-            players.get(detective).sendMessage(Main.PREFIX + "§aYou are §7Innocent§a!");
-            players.get(detective).sendTitle("§aYou are", "§7Innocent", 10, 60, 10);
+            player.sendMessage(Main.PREFIX + "§aYou are §7Innocent§a!");
+            player.sendTitle("§aYou are", "§7Innocent", 10, 60, 10);
         }
     }
 

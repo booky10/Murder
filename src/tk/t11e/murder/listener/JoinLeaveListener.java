@@ -1,6 +1,7 @@
 package tk.t11e.murder.listener;
 // Created by booky10 in Murder (21:32 17.01.20)
 
+import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -21,6 +22,10 @@ public class JoinLeaveListener implements Listener {
         event.setQuitMessage("");
         if(!event.getPlayer().getWorld().getName().equalsIgnoreCase(MurderManager.getWorld().getName()))
             return;
+        if(!MurderManager.isRunning){
+            Bukkit.reload();
+            return;
+        }
         if(!MurderManager.roleHashMap.containsKey(event.getPlayer().getUniqueId())) return;
         MurderManager.kill(event.getPlayer());
     }

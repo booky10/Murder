@@ -13,6 +13,7 @@ import tk.t11e.murder.listener.FoodChangeListener;
 import tk.t11e.murder.listener.InteractListener;
 import tk.t11e.murder.listener.JoinLeaveListener;
 import tk.t11e.murder.manager.MurderManager;
+import tk.t11e.murder.util.Randomizer;
 import tk.t11e.murder.util.WorldUtils;
 
 import java.util.Objects;
